@@ -3,212 +3,253 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Al-Baqiyatul Hidayah | PSB</title>
+  <title>Al-Baqiyatul Hidayah | Penerimaan Santri Baru</title>
   <style>
-    body {
-      margin: 0;
-      padding: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background-color: #f9f9f9;
-      color: #333;
-      line-height: 1.6;
-      overflow-x: hidden; /* Menghindari scroll horizontal */
+    :root {
+      --primary: #2d6a4f;
+      --light: #f9f9f9;
+      --gray: #555;
+      --white: #fff;
+      --font: 'Segoe UI', sans-serif;
     }
 
-    h1, h2 {
-      margin-top: 0;
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: var(--font);
+      background-color: var(--light);
+      color: var(--gray);
+    }
+
+    header {
+      background-color: var(--white);
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .navbar {
+      max-width: 1000px;
+      margin: auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+    }
+
+    .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: var(--primary);
+    }
+
+    nav a {
+      margin-left: 1.5rem;
+      text-decoration: none;
+      color: var(--gray);
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: var(--primary);
+    }
+
+    .hero {
+      background: linear-gradient(to right bottom, #e6f7ff, #f0fff5);
+      padding: 4rem 2rem;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-size: 2.5rem;
+      color: var(--primary);
+      margin-bottom: 1rem;
+    }
+
+    .hero p {
+      font-size: 1.1rem;
+      color: #555;
+      max-width: 700px;
+      margin: 0 auto 2rem;
+    }
+
+    .btn-primary {
+      background-color: var(--primary);
+      color: white;
+      padding: 0.75rem 1.5rem;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      font-weight: 500;
+      transition: background 0.3s ease;
+      text-decoration: none;
+    }
+
+    .btn-primary:hover {
+      background-color: #1e4e36;
+    }
+
+    .section {
+      max-width: 1000px;
+      margin: 4rem auto;
+      padding: 0 2rem;
+    }
+
+    .section h2 {
+      font-size: 1.8rem;
+      color: var(--primary);
+      margin-bottom: 1rem;
+      border-left: 4px solid var(--primary);
+      padding-left: 1rem;
+    }
+
+    .section ul {
+      list-style-type: disc;
+      padding-left: 1.5rem;
+      margin-top: 1rem;
+    }
+
+    .section li {
       margin-bottom: 0.5rem;
     }
 
-    .container {
-      max-width: 600px;
-      margin: 0 auto;
-      padding: 20px;
-    }
-
-    .header {
-      text-align: center;
-      margin-bottom: 20px;
-    }
-
-    .header img {
-      width: 100%;
-      max-width: 200px;
-      margin-bottom: 10px;
-    }
-
-    .price {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background-color: #fbd78d;
-      border-radius: 20px;
-      padding: 10px 20px;
-      margin: 20px 0;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    }
-
-    .price span {
-      font-size: 1.5rem;
-      font-weight: bold;
-    }
-
-    .description {
-      text-align: center;
-      margin-bottom: 20px;
-    }
-
-    .button {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background-color: #4e73df;
-      color: white;
-      border: none;
-      border-radius: 20px;
-      padding: 15px 30px;
-      font-size: 1.2rem;
-      cursor: pointer;
-      transition: background-color 0.3s ease;
-    }
-
-    .button:hover {
-      background-color: #4169e1;
-    }
-
-    .terms {
-      background-color: white;
-      border-radius: 10px;
-      padding: 20px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-      margin-top: 20px;
-    }
-
-    .terms h2 {
-      color: #4e73df;
-      margin-bottom: 10px;
-    }
-
-    .terms ul {
-      list-style-type: disc;
-      padding-left: 20px;
-    }
-
-    .terms li {
-      margin-bottom: 10px;
-    }
-
-    .terms .highlight {
-      background-color: #fff5e6;
-      padding: 10px;
-      border-radius: 5px;
-    }
-
     .form-container {
-      background-color: white;
+      background-color: var(--white);
+      padding: 2rem;
       border-radius: 10px;
-      padding: 20px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-      margin-top: 20px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.05);
     }
 
     label {
       display: block;
+      margin-bottom: 0.5rem;
       font-weight: 600;
-      margin-top: 0.5rem;
     }
 
-    input, textarea, select {
+    input, select, textarea {
       width: 100%;
-      padding: 0.6rem;
-      margin-top: 0.3rem;
-      border: 1px solid #ccc;
+      padding: 0.75rem;
+      margin-bottom: 1rem;
+      border: 1px solid #ddd;
       border-radius: 6px;
+      font-size: 1rem;
       transition: border 0.3s ease;
     }
 
     input:focus, textarea:focus, select:focus {
-      border-color: #4e73df;
       outline: none;
+      border-color: var(--primary);
     }
 
-    .form-button {
-      background-color: #4e73df;
+    footer {
+      background-color: var(--primary);
       color: white;
-      border: none;
-      padding: 10px 20px;
-      border-radius: 5px;
-      cursor: pointer;
-      transition: background-color 0.3s ease;
+      text-align: center;
+      padding: 2rem 1rem;
+      margin-top: 4rem;
     }
 
-    .form-button:hover {
-      background-color: #4169e1;
-    }
-
-    .whatsapp-link {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background-color: #25D366;
-      color: white;
-      border-radius: 50%;
-      width: 50px;
-      height: 50px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-      cursor: pointer;
-      z-index: 999;
-    }
-
-    .whatsapp-link svg {
-      width: 24px;
-      height: 24px;
-    }
-
-    @media (max-width: 600px) {
-      .container {
-        padding: 10px;
+    @media (max-width: 768px) {
+      .hero h1 {
+        font-size: 2rem;
       }
-    }
 
-    /* Scroll Animation */
-    .fade-in {
-      opacity: 0;
-      transform: translateY(20px);
-      transition: all 0.5s ease;
-    }
+      .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+      }
 
-    .section-reveal {
-      opacity: 1;
-      transform: translateY(0);
+      nav a {
+        margin: 0.5rem 0 0 0;
+      }
     }
   </style>
 </head>
 <body>
 
-  <!-- Container -->
-  <div class="container">
-
-    <!-- Header -->
-    <div class="header fade-in section-reveal">
-      <img src="https://via.placeholder.com/200x200.png?text=Logo+Pesantren " alt="Logo Al-Baqiyatul Hidayah">
-      <h1>Pendaftaran Santri Baru</h1>
-      <p>Pesantren Al-Baqiyatul Hidayah</p>
+  <!-- Navbar -->
+  <header>
+    <div class="navbar">
+      <div class="logo">Al-Baqiyatul Hidayah</div>
+      <nav>
+        <a href="#info">Informasi</a>
+        <a href="#form">Pendaftaran</a>
+        <a href="#contact">Kontak</a>
+      </nav>
     </div>
+  </header>
 
-    <!-- Price -->
-    <div class="price fade-in section-reveal">
-      <span>Hanya Rp250.000</span>
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1>Penerimaan Santri Baru Tahun Ajaran 2025/2026</h1>
+    <p>Pesantren Modern dengan pendekatan Ilmu Pengetahuan, Agama, dan Akhlak Mulia.</p>
+    <a href="#form" class="btn-primary">Daftar Sekarang</a>
+  </section>
+
+  <!-- Informasi -->
+  <section id="info" class="section">
+    <h2>Informasi Pendaftaran</h2>
+    <ul>
+      <li><strong>Jenjang:</strong> MTs & MA (Putra/Putri)</li>
+      <li><strong>Tanggal Pendaftaran:</strong> 1 Januari – 30 Juni 2025</li>
+      <li><strong>Biaya Pendaftaran:</strong> Rp250.000,-</li>
+      <li><strong>Persyaratan:</strong>
+        <ul style="list-style-type: circle; padding-left: 1.5rem;">
+          <li>Fotokopi rapor terakhir</li>
+          <li>Fotokopi akta kelahiran</li>
+          <li>Pas foto ukuran 3x4 (2 lembar)</li>
+          <li>Mengisi formulir online</li>
+        </ul>
+      </li>
+    </ul>
+  </section>
+
+  <!-- Formulir Pendaftaran -->
+  <section id="form" class="section">
+    <h2>Formulir Pendaftaran</h2>
+    <div class="form-container">
+      <form action="#" method="POST">
+        <label>Nama Lengkap</label>
+        <input type="text" name="nama" required />
+
+        <label>Jenis Kelamin</label>
+        <select name="jk" required>
+          <option value="">-- Pilih --</option>
+          <option value="Laki-laki">Laki-laki</option>
+          <option value="Perempuan">Perempuan</option>
+        </select>
+
+        <label>Tempat Lahir</label>
+        <input type="text" name="tempat_lahir" />
+
+        <label>Tanggal Lahir</label>
+        <input type="date" name="tgl_lahir" />
+
+        <label>Alamat</label>
+        <textarea name="alamat" rows="3"></textarea>
+
+        <label>No HP Orang Tua</label>
+        <input type="tel" name="no_hp" />
+
+        <label>Email</label>
+        <input type="email" name="email" />
+
+        <button type="submit" class="btn-primary">Kirim Pendaftaran</button>
+      </form>
     </div>
+  </section>
 
-    <!-- Description -->
-    <div class="description fade-in section-reveal">
-      <p>Bergabunglah sebagai santri di Al-Baqiyatul Hidayah dan mulai belajar hari ini!</p>
-    </div>
+  <!-- Footer -->
+  <footer id="contact">
+    &copy; 2025 Al-Baqiyatul Hidayah. All rights reserved.<br/>
+    Kontak Admin: +62 812-3456-7890 (Ust. Ahmad)
+  </footer>
 
-    <!-- Button -->
-    <div class="button fade-in section-reveal">
-      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="8.5" cy="7" r="4"></circle><line x1="16" y1
+</body>
+</html>
