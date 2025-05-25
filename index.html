@@ -1,151 +1,121 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Kim Kiro Portfolio</title>
-<style>
-  /* Reset dan style dasar */
-  * {
-    margin: 0; padding: 0; box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
-  }
-  body {
-    background: #111;
-    color: #eee;
-    line-height: 1.6;
-  }
-  a {
-    color: #6ea5ff;
-    text-decoration: none;
-  }
-  a:hover {
-    text-decoration: underline;
-  }
-  header {
-    background: #222;
-    padding: 20px;
-    text-align: center;
-  }
-  header h1 {
-    font-weight: 700;
-    font-size: 2.4rem;
-    letter-spacing: 2px;
-  }
-  nav {
-    margin-top: 10px;
-  }
-  nav a {
-    margin: 0 12px;
-    font-weight: 500;
-  }
-  main {
-    max-width: 900px;
-    margin: 40px auto;
-    padding: 0 20px;
-  }
-  section {
-    margin-bottom: 40px;
-  }
-  h2 {
-    color: #6ea5ff;
-    font-weight: 700;
-    margin-bottom: 15px;
-    border-bottom: 2px solid #6ea5ff;
-    display: inline-block;
-    padding-bottom: 5px;
-  }
-  p {
-    margin-bottom: 15px;
-    font-weight: 400;
-  }
-  ul.skills {
-    list-style: none;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-  }
-  ul.skills li {
-    background: #333;
-    padding: 8px 15px;
-    border-radius: 20px;
-    font-weight: 600;
-    font-size: 0.9rem;
-    flex: 1 0 30%;
-    max-width: 150px;
-    text-align: center;
-  }
-  footer {
-    text-align: center;
-    padding: 25px 10px;
-    font-size: 0.9rem;
-    color: #777;
-    border-top: 1px solid #444;
-    margin-top: 60px;
-  }
-
-  /* Responsive */
-  @media (max-width: 600px) {
-    ul.skills {
-      flex-direction: column;
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Al-Baqiyatul Hidayah | PSB</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss @2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to bottom, #e6f7ff, #f0fff0);
+      color: #333;
     }
-    ul.skills li {
-      max-width: 100%;
+    .btn-primary {
+      background-color: #2d6a4f;
+      color: white;
+      padding: 0.5rem 1.2rem;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
     }
-  }
-</style>
+    .btn-primary:hover {
+      background-color: #1e4e36;
+    }
+    input, textarea, select {
+      padding: 0.6rem;
+      margin-top: 0.3rem;
+      margin-bottom: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      width: 100%;
+    }
+    h2 {
+      color: #2d6a4f;
+      margin-bottom: 1rem;
+    }
+  </style>
 </head>
-<body>
+<body class="p-4 md:p-8">
 
-<header>
-  <h1>Kim Kiro</h1>
-  <nav>
-    <a href="#about">Tentang</a>
-    <a href="#skills">Keahlian</a>
-    <a href="#projects">Proyek</a>
-    <a href="#music">Musik</a>
-  </nav>
-</header>
+  <!-- Header -->
+  <header class="text-center mb-10">
+    <h1 class="text-3xl md:text-4xl font-bold text-green-800">PESANTREN AL-BAQIYATUL HIDAYAH</h1>
+    <p class="mt-2 text-lg text-gray-600">Penerimaan Santri Baru Tahun Ajaran 2025/2026</p>
+  </header>
 
-<main>
-  <section id="about">
-    <h2>Tentang Kim Kiro</h2>
-    <p>Kim Kiro adalah profesional kreatif asal Indonesia dengan pengalaman lebih dari dua tahun di bidang IT, desain, editing, dan pemasaran.</p>
-    <p>Lulusan SMK N1 Air Putih jurusan Teknik Komputer dan Jaringan (TKJ).</p>
-    <p>Minat: fotografi, membaca, memasak, pendakian, musik, seni digital.</p>
+  <!-- Hero Section -->
+  <section id="home" class="mb-12 text-center">
+    <img src="https://via.placeholder.com/1200x400.png?text=Selamat+Datang+di+Al-Baqiyatul+Hidayah " alt="Banner Pesantren" class="w-full max-h-64 object-cover rounded-lg shadow-md mx-auto mb-6">
+    <p class="max-w-3xl mx-auto text-lg leading-relaxed">
+      Al-Baqiyatul Hidayah adalah pesantren modern yang menggabungkan pendidikan agama dengan kurikulum nasional.
+      Kami membekali santri dengan ilmu pengetahuan, akhlak mulia, dan kemandirian.
+    </p>
   </section>
 
-  <section id="skills">
-    <h2>Keahlian Profesional</h2>
-    <ul class="skills">
-      <li>Desain Grafis (90%)</li>
-      <li>Pengembangan Web (85%)</li>
-      <li>Fotografi (80%)</li>
-      <li>Editing Video (75%)</li>
-      <li>Copywriting (70%)</li>
-      <li>Manajemen Media Sosial (85%)</li>
+  <!-- Informasi -->
+  <section id="info" class="mb-12">
+    <h2>Informasi Pendaftaran</h2>
+    <ul class="list-disc ml-6 space-y-2 max-w-2xl">
+      <li><strong>Pendaftaran dibuka:</strong> 1 Januari - 30 Juni 2025</li>
+      <li><strong>Jenjang:</strong> MTs & MA (Putra/Putri)</li>
+      <li><strong>Persyaratan:</strong>
+        <ul class="list-circle ml-5 mt-1">
+          <li>Fotokopi rapor terakhir</li>
+          <li>Fotokopi akta kelahiran</li>
+          <li>Pas foto 3x4 (2 lembar)</li>
+          <li>Mengisi formulir pendaftaran</li>
+        </ul>
+      </li>
+      <li><strong>Kontak:</strong> +62 812-3456-7890 (Ust. Ahmad)</li>
     </ul>
   </section>
 
-  <section id="projects">
-    <h2>Proyek Terkait</h2>
-    <ul>
-      <li><b>Grain Symbol Universe</b>: Kumpulan simbol dan karakter khusus.</li>
-      <li><b>GameZone</b>: Portal berita dan ulasan game.</li>
-      <li><b>Otakudesukai</b>: Platform streaming anime subtitle Indonesia.</li>
-      <li><b>All Payment Kiro</b>: Solusi pembayaran digital.</li>
-    </ul>
+  <!-- Formulir Pendaftaran -->
+  <section id="form" class="mb-12 bg-white p-6 rounded-lg shadow-md max-w-3xl mx-auto">
+    <h2 class="text-2xl font-semibold mb-4">Formulir Pendaftaran</h2>
+    <form action="#" method="POST">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div>
+          <label>Nama Lengkap</label>
+          <input type="text" name="nama" required>
+        </div>
+        <div>
+          <label>Jenis Kelamin</label>
+          <select name="jk" required>
+            <option value="">-- Pilih --</option>
+            <option value="Laki-laki">Laki-laki</option>
+            <option value="Perempuan">Perempuan</option>
+          </select>
+        </div>
+        <div>
+          <label>Tempat Lahir</label>
+          <input type="text" name="tempat_lahir">
+        </div>
+        <div>
+          <label>Tanggal Lahir</label>
+          <input type="date" name="tgl_lahir">
+        </div>
+        <div class="md:col-span-2">
+          <label>Alamat</label>
+          <textarea name="alamat" rows="3"></textarea>
+        </div>
+        <div>
+          <label>No HP Orang Tua</label>
+          <input type="tel" name="no_hp">
+        </div>
+        <div>
+          <label>Email</label>
+          <input type="email" name="email">
+        </div>
+      </div>
+      <button type="submit" class="btn-primary">Kirim Pendaftaran</button>
+    </form>
   </section>
 
-  <section id="music">
-    <h2>Musik Favorit</h2>
-    <p>Beberapa lagu favorit Kim Kiro termasuk karya The Weeknd, Last Child, Christina Perri, dan Hindia.</p>
-  </section>
-</main>
-
-<footer>
-  &copy; 2025 Kim Kiro. All rights reserved.
-</footer>
+  <!-- Footer -->
+  <footer class="text-center text-sm text-gray-500 mt-12">
+    &copy; 2025 Al-Baqiyatul Hidayah. All rights reserved.
+  </footer>
 
 </body>
 </html>
