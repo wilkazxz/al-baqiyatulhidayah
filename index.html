@@ -12,6 +12,7 @@
       background-color: #f9f9f9;
       color: #333;
       line-height: 1.6;
+      overflow-x: hidden; /* Menghindari scroll horizontal */
     }
 
     h1, h2 {
@@ -30,9 +31,10 @@
       margin-bottom: 20px;
     }
 
-    .header h1 {
-      font-size: 2rem;
-      color: #4e73df;
+    .header img {
+      width: 100%;
+      max-width: 200px;
+      margin-bottom: 10px;
     }
 
     .price {
@@ -102,10 +104,86 @@
       border-radius: 5px;
     }
 
+    .form-container {
+      background-color: white;
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      margin-top: 20px;
+    }
+
+    label {
+      display: block;
+      font-weight: 600;
+      margin-top: 0.5rem;
+    }
+
+    input, textarea, select {
+      width: 100%;
+      padding: 0.6rem;
+      margin-top: 0.3rem;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      transition: border 0.3s ease;
+    }
+
+    input:focus, textarea:focus, select:focus {
+      border-color: #4e73df;
+      outline: none;
+    }
+
+    .form-button {
+      background-color: #4e73df;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .form-button:hover {
+      background-color: #4169e1;
+    }
+
+    .whatsapp-link {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #25D366;
+      color: white;
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      cursor: pointer;
+      z-index: 999;
+    }
+
+    .whatsapp-link svg {
+      width: 24px;
+      height: 24px;
+    }
+
     @media (max-width: 600px) {
       .container {
         padding: 10px;
       }
+    }
+
+    /* Scroll Animation */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 0.5s ease;
+    }
+
+    .section-reveal {
+      opacity: 1;
+      transform: translateY(0);
     }
   </style>
 </head>
@@ -115,42 +193,22 @@
   <div class="container">
 
     <!-- Header -->
-    <div class="header">
+    <div class="header fade-in section-reveal">
+      <img src="https://via.placeholder.com/200x200.png?text=Logo+Pesantren " alt="Logo Al-Baqiyatul Hidayah">
       <h1>Pendaftaran Santri Baru</h1>
       <p>Pesantren Al-Baqiyatul Hidayah</p>
     </div>
 
     <!-- Price -->
-    <div class="price">
+    <div class="price fade-in section-reveal">
       <span>Hanya Rp250.000</span>
     </div>
 
     <!-- Description -->
-    <div class="description">
+    <div class="description fade-in section-reveal">
       <p>Bergabunglah sebagai santri di Al-Baqiyatul Hidayah dan mulai belajar hari ini!</p>
     </div>
 
     <!-- Button -->
-    <div class="button">
-      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="8.5" cy="7" r="4"></circle><line x1="16" y1="5" x2="16" y2="5"></line></svg>
-      <span style="margin-left: 10px;">Daftar Sekarang</span>
-    </div>
-
-    <!-- Terms -->
-    <div class="terms">
-      <h2>Ketentuan Pendaftaran</h2>
-      <ul>
-        <li>Biaya pendaftaran Rp250.000 (sekali bayar)</li>
-        <li>Pembayaran via transfer bank/DANA/OVO</li>
-        <li>Santri harus siap belajar secara aktif dan disiplin</li>
-        <li class="highlight">TIDAK BOLEH MENJUAL BOT</li>
-        <li>Dilarang melakukan kegiatan yang melanggar aturan pesantren</li>
-        <li>Komunikasi sopan dan profesional</li>
-        <li>Admin berhak mengeluarkan pelanggar</li>
-      </ul>
-    </div>
-
-  </div>
-
-</body>
-</html>
+    <div class="button fade-in section-reveal">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="8.5" cy="7" r="4"></circle><line x1="16" y1
